@@ -81,7 +81,7 @@
 
 </style>
 <body>
-    <header style="background-color: rgb(33, 150, 243);">
+    <header style="background-color: #472f92">
         <nav class="navbar navbar-expand-lg sticky-top navbar-light p-3 shadow-sm" >
             <div class="container">
                 <a href="{{ route('home') }}"><img  class="logo-image" src="{{ asset('/images/logohungha.jpg') }}" alt="{{ env('APP_NAME', 'Badminton.io') }}" width="100" height="100"></a>

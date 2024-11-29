@@ -43,8 +43,8 @@
             </div>
         </div>
 
-        <section id="next-tournament" class="next-tournament-section bg-black">
-            <div class="next-tournament-wrap">
+        <section id="next-tournament" class="next-tournament-section bg-black ">
+            <div class="next-tournament-wrap container">
                 <div class="results">
                     <div class="wrapper-results">
                         <div class="box-results-tournament">
@@ -55,12 +55,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="box-results-tournament-right">
                                     <div class="c-left-team d-flex">
-                                        <div class="c-name">Quảng Nam</div>
+                                        <div class="c-name">Hưng Hà</div>
                                         <div class="c-img">
-                                            <img src="https://cms.hanoifc.net/images/8db34e40-8070-4b04-87b2-fa42037c9676.png" width="200px">
+                                            <img src="{{asset('/images/logo-hungha.jpeg')}}" width="200px">
                                         </div>
                                     </div>
                                     <div class="c-name" style="padding: 20px; font-size: 30px"><span>- -</span></div>
@@ -77,12 +77,10 @@
             </div>
         </section>
 
-
-
         <div class="c-team-info-home">
             <div class="container">
                 <div class="d-home-box">
-                    <div class="is-title"><h4>Đội hình</h4>
+                    <div class="is-title"><h4 style="color:#472f92;">Đội hình</h4>
                         <a href="/doi-hinh">
                             <i class="bi bi-chevron-double-right"></i>
                         </a>
@@ -91,10 +89,10 @@
                 <div id="carouselExample" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{ asset('images/hunghafc.jpg') }}" alt="First Slide">
+                            <img class="d-block w-100" src="{{ asset('images/logo11.jpg') }}" alt="First Slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ asset('images/hunghafc.jpg') }}" alt="Second Slide">
+                            <img class="d-block w-100" src="{{ asset('images/logo22.jpg') }}" alt="Second Slide">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="{{ asset('images/hunghafc.jpg') }}" alt="Third Slide">
@@ -112,6 +110,92 @@
             </div>
         </div>
 
+        <div class="container">
+            <div class="d-home-box">
+                <div class="is-title" ><h4 style="color:#472f92;">Video</h4>
+                    <a href="/doi-hinh">
+                        <i class="bi bi-chevron-double-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section id="news" class="news-section ">
+            <div class="">
+                <div class="news-overview-wrap">
+                    <div class="news-overview-item">
+                        <div class="news-overview-image">
+                            <a href="">
+                                <img src="https://i.ytimg.com/vi/JSM43TN1n3U/hqdefault.jpg?s…AYgATgBQAE=&rs=AOn4CLDqMalWdgYjymI04I9uY0es5sD1Ag" alt="" class="img-responsive-hover b-error">
+                            </a>
+                        </div>
+
+                        <div class="news-overview-text">
+                            <h4 class="media-heading fw-400 fs-16px">
+                                <a href="https://badominton.io/news/se-ra-sao-neu-ban-mang-giay-the-thao-mon-khac-vao-choi-cau-long" title="Sẽ ra sao nếu bạn mang giày thể thao môn khác vào chơi cầu lông?">
+                                    FULL MATCH: FC HƯNG HÀ - FC THÁI HÀ | Football Friendly  </a>
+                            </h4>
+                            <span class="fw-300 fs-12px text-gray">
+                        Match 01/09/2024<br>
+                    </span>
+                        </div>
+                    </div>
+                    <div class="news-overview-item">
+                        <div class="news-overview-image">
+                            <a href="">
+                                <img src="https://badominton.io/images/upload/post/b7lbfjrcfqr4swmk687t.jpg" alt="" class="img-responsive-hover b-error">
+                            </a>
+                        </div>
+
+                        <div class="news-overview-text">
+                            <h4 class="media-heading fw-400 fs-16px">
+                                <a href="https://badominton.io/news/nhung-dieu-can-biet-de-thuc-hien-ky-thuat-do-giao-cau-dung-cach-hieu-qua" title="Những điều cần biết để thực hiện Kỹ thuật đỡ giao cầu đúng cách, HIỆU QUẢ">
+                                    Những điều cần biết để thực hiện Kỹ thuật đỡ giao cầu đúng cách, HIỆU QUẢ </a>
+                            </h4>
+                            <span class="fw-300 fs-12px text-gray">
+                        11-November-2024<br>
+                    </span>
+                        </div>
+                    </div>
+                    <div class="news-overview-item">
+                        <div class="news-overview-image">
+                            <a href="">
+                                <img src="https://badominton.io/images/upload/post/Anh_1_2_5__CCOX.jpg" alt="" class="img-responsive-hover b-error">
+                            </a>
+                        </div>
+
+                        <div class="news-overview-text">
+                            <h4 class="media-heading fw-400 fs-16px">
+                                <a href="https://badominton.io/news/cac-loi-sai-co-ban-trong-cau-long-khien-ban-thua-tran" title="Các lỗi sai cơ bản trong cầu lông khiến bạn thua trận">
+                                    Các lỗi sai cơ bản trong cầu lông khiến bạn thua trận </a>
+                            </h4>
+                            <span class="fw-300 fs-12px text-gray">
+                        11-November-2024<br>
+                    </span>
+                        </div>
+                    </div>
+                    <div class="news-overview-item">
+                        <div class="news-overview-image">
+                            <a href="">
+                                <img src="https://badominton.io/images/upload/post/1-dau-lung-shutterstock-9123.jpg" alt="" class="img-responsive-hover b-error">
+                            </a>
+                        </div>
+
+                        <div class="news-overview-text">
+                            <h4 class="media-heading fw-400 fs-16px">
+                                <a href="https://badominton.io/news/danh-cau-long-bi-dau-lung-co-gay-nguy-hiem-khong" title="Đánh cầu lông bị đau lưng có gây nguy hiểm không ?">
+                                    Đánh cầu lông bị đau lưng có gây nguy hiểm không ? </a>
+                            </h4>
+                            <span class="fw-300 fs-12px text-gray">
+                        17-September-2024<br>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="margin-top: -9px;">
+                </div>
+            </div>
+
+        </section>
         <div class="partners-section-wrap">
             <div class="partners-section">
                 <div class="partners-left" style="margin-bottom: 100px">

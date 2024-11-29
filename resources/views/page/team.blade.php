@@ -39,6 +39,109 @@
         margin-top: 50px;
     }
 
+    .item-player {
+        position: relative;
+        transition: .4s;
+    }
+
+    .item-player .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .item-player .img img {
+        width: 100%;
+        vertical-align: middle;
+
+    }
+
+    .item-player .img:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg, rgba(68, 73, 77, .6588235294), rgba(68, 73, 77, .0117647059));
+        transition: .4s;
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 7%);
+    }
+
+    .item-player .img:after {
+        transition: .2s;
+        background-image: linear-gradient(0deg, #44494d, rgba(68, 73, 77, .2901960784));
+        height: 50%;
+    }
+
+    .item-player .img:after, .item-player .img:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg, rgba(68, 73, 77, .6588235294), rgba(68, 73, 77, .0117647059));
+        transition: .4s;
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 7%);
+    }
+
+    .img:hover img {
+        transform: scale(1.1); /* Zoom in effect */
+        opacity: 0.7; /* Change opacity */
+        zoom: 1.2;
+    }
+
+    .item-player .ct {
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .item-player .ct .top {
+        text-align: center;
+        text-transform: uppercase;
+        transition: .2s;
+    }
+
+    .item-player .ct .top .name {
+        font-weight: 500;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .item-player .ct .top .location {
+        font-weight: 300;
+    }
+
+    .inner-img {
+        transition: 0.3s;
+    }
+
+    .inner-img:hover {
+        transform: scale(1.1);
+    }
+
+    .news-overview-item {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        background-color: #333;
+        border: 15px solid #fff;
+    }
+
+    .news-overview-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: normal;
+        justify-content: flex-start;
+    }
 </style>
 @section('content')
     <div class="box-historical container">
@@ -48,124 +151,92 @@
         </div>
         <div class="title">
             <div class="">
-                <h3>Goalkeeper</h3>
+                <h3>THỦ MÔN</h3>
             </div>
         </div>
-        @foreach($listGoalkeeper as $player)
-            <div id="list-historical">
-                <div class="item-single">
-                    <div class="info">
-                        <!-- Player profile image -->
-                        <div class="image">
-                            <a href="https://bwfworldtour.bwfbadminton.com/player/96713/nozomi-okuhara">
-                                <img alt="nozomi-okuhara"
-                                     src="{{asset($player->number_shirt)}}"
-                                     class=" b-error">
-                            </a>
+        <div class="news-overview-wrap">
+            @foreach($listGoalkeeper as $player)
+
+            <div class="news-overview-item">
+                <div class="item-player v2 inner-img">
+                    <a href="https://viettelsports.vn/doi-bong/cau-thu/737/ngo-xuan-son" title="{{$player->name}}" class="link"></a>
+                    <div class="img"><img src="{{asset($player->avatar)}}" ></div>
+                    <div class="ct">
+                        <div class="top">
+                            <h3 class="name fz26">{{$player->number_shirt}} - {{$player->name}}</h3>
                         </div>
 
-                        <!-- Player flag and name -->
-                        <div class="description d-flex">
-                            <p class="player-number"> {{$player->number_shirt}}</p>
-                            <p class="player-name" >{{$player->name}} </p>
-                        </div>
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
-
-    <div style="background: #f3f4f6">
-        <div class="box-historical container" >
-            <!-- Display tournament details -->
-            <div class="title">
-                <div class="">
-                    <h3>Defender</h3>
-                </div>
+            @endforeach
+        </div>
+        <div class="title">
+            <div class="">
+                <h3>HẬU VỆ</h3>
             </div>
+        </div>
+        <div class="news-overview-wrap">
             @foreach($defender as $player)
-                <div id="list-historical">
-                    <div class="item-single">
-                        <div class="info">
-                            <!-- Player profile image -->
-                            <div class="image">
-                                <a href="https://bwfworldtour.bwfbadminton.com/player/96713/nozomi-okuhara">
-                                    <img alt="nozomi-okuhara"
-                                         src="{{asset($player->number_shirt)}}"
-                                         class=" b-error">
-                                </a>
+                <div class="news-overview-item ">
+                    <div class="item-player v2 inner-img">
+                        <a href="https://viettelsports.vn/doi-bong/cau-thu/737/ngo-xuan-son" title="{{$player->name}}" class="link"></a>
+                        <div class="img"><img src="{{asset($player->avatar)}}" ></div>
+                        <div class="ct">
+                            <div class="top">
+                                <h3 class="name fz26">{{$player->number_shirt}} - {{$player->name}}</h3>
                             </div>
 
-                            <!-- Player flag and name -->
-                            <div class="description d-flex">
-                                <p class="player-number"> {{$player->number_shirt}}</p>
-                                <p class="player-name" >{{$player->name}} </p>
-                            </div>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
 
-    </div>
-    <div class="box-historical container">
-        <!-- Display tournament details -->
         <div class="title">
             <div class="">
-                <h3>Midfielder</h3>
+                <h3>TIỀN VỆ</h3>
             </div>
         </div>
-        @foreach($midfielder as $player)
-            <div id="list-historical">
-                <div class="item-single">
-                    <div class="info">
-                        <!-- Player profile image -->
-                        <div class="image">
-                            <a href="https://bwfworldtour.bwfbadminton.com/player/96713/nozomi-okuhara">
-                                <img alt="nozomi-okuhara"
-                                     src="{{asset($player->number_shirt)}}"
-                                     class=" b-error">
-                            </a>
-                        </div>
+        <div class="news-overview-wrap">
+            @foreach($midfielder as $player)
+                <div class="news-overview-item">
+                    <div class="item-player v2 inner-img">
+                        <a href="https://viettelsports.vn/doi-bong/cau-thu/737/ngo-xuan-son" title="{{$player->name}}" class="link"></a>
+                        <div class="img"><img src="{{asset($player->avatar)}}" ></div>
+                        <div class="ct">
+                            <div class="top">
+                                <h3 class="name fz26">{{$player->number_shirt}} - {{$player->name}}</h3>
+                            </div>
 
-                        <!-- Player flag and name -->
-                        <div class="description d-flex">
-                            <p class="player-number"> {{$player->number_shirt}}</p>
-                            <p class="player-name" >{{$player->name}} </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
-    <div class="box-historical container" style="margin-bottom: 50px">
-        <!-- Display tournament details -->
+            @endforeach
+        </div>
+
         <div class="title">
             <div class="">
-                <h3>Forward</h3>
+                <h3>TIỀN ĐẠO</h3>
             </div>
         </div>
-        @foreach($forward as $player)
-        <div id="list-historical">
-            <div class="item-single">
-                <div class="info">
-                    <!-- Player profile image -->
-                    <div class="image">
-                        <a href="https://bwfworldtour.bwfbadminton.com/player/96713/nozomi-okuhara">
-                            <img alt="nozomi-okuhara"
-                                 src="{{asset($player->number_shirt)}}"
-                                 class=" b-error">
-                        </a>
-                    </div>
+        <div class="news-overview-wrap">
+            @foreach($forward as $player)
+                <div class="news-overview-item">
+                    <div class="item-player v2 inner-img">
+                        <a href="https://viettelsports.vn/doi-bong/cau-thu/737/ngo-xuan-son" title="{{$player->name}}" class="link"></a>
+                        <div class="img"><img src="{{asset($player->avatar)}}" ></div>
+                        <div class="ct">
+                            <div class="top">
+                                <h3 class="name fz26">{{$player->number_shirt}} - {{$player->name}}</h3>
+                            </div>
 
-                    <!-- Player flag and name -->
-                    <div class="description d-flex">
-                        <p class="player-number"> {{$player->number_shirt}}</p>
-                        <p class="player-name" >{{$player->name}} </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
+
+
 @endsection
