@@ -27,7 +27,7 @@
     <link rel="alternate" hreflang="en-US" href="https://badminton.io">
     <link rel="alternate" hreflang="af" href="https://badminton.io">
     <link rel="alternate" hreflang="x-default" href="https://badminton.io">
-    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo-no-background.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logohungha.jpg') }}">
 
     <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page/style.css') }}">
@@ -142,46 +142,46 @@
 
     @yield('content')
 
-    <div class="" style="background: #222; text-transform: uppercase;">
+    <div class="" style="background: #472f92; text-transform: uppercase;">
         <footer class="container py-5"  >
             <div class="row">
                 <div class="color-white col-md-3 mb-3">
-                    <h4 class="color-white">{{ __('Criteria') }}</h4>
-                    <ul class="nav flex-column footer-p">
-                        <p>{{ __('Efficiency and ease-of-use are our mission, simplifying the process of running a sports league.') }}</p>
-                        <p>{{ __('Badminton.io is available to all at no cost. Additionally, we offer premium plans that include additional functionality.') }}</p>
+                    <ul class="social">
+                        <li><a href="{{route('home')}}"><img style="width: 100%" src="https://vsports-assets-hfevhbaxghane9f2.z01.azurefd.net/files/1731259267600-mb4n.jpeg"></a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 mb-3 color-white">
-                    <h4 class="color-white">{{ __('About') }}</h4>
                     <ul class="nav-a">
-                        <li><a href="{{ route('about') }}">{{ __('About') }}</a></li>
+                        <li><a href="">Chính sách bảo mật thông tin</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                        <li><a href="">Chính sách vận chuyển và kiểm tra hàng
+
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
 
                 <div class="col-md-3 mb-3 color-white">
-                    <h4 class="color-white">{{ __('Features') }}</h4>
                     <ul class="nav-a " style="display: flex; flex-direction: column;">
-                        <li><a href="{{ route('list.league') }}">{{ __('League') }}</a></li>
-                        <li><a href="">{{ __('Shop') }}</a></li>
-                        <li><a href="{{ route('news') }}">{{ __('News') }}</a></li>
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Đội hình</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 color-white">
                     <form>
-                        <h4 class="h3 color-white">{{ __('Badminton.io') }}</h4>
+                        <h4 class="h3 color-white">Thông tin liêu hệ</h4>
                         <p >
                             <small class="nav-a">
-                                <a href="{{ route('term.and.conditions') }}">{{ __('Terms & Conditions') }}</a>
+                                <a href="https://www.youtube.com/channel/UC7aUjm3mUbYG85UTIg-cGmw?sub_confirmation=1" rel="noreferrer" target="_blank">
+                                    <img width="70" height="70" src="https://hanoifc.com.vn/images/youtube.png"></a>
                                 <br>
                                 <br>
-                                <a href="{{ route('home')}}">{{ __('Badminton.io') }}</a>
                             </small>
                         </p>
-                        <ul class="social">
-                            <li><a href="{{route('home')}}"><img src="{{ asset('/images/hunghafc.jpg') }}"  width="70" height="70"></a></li>
-                        </ul>
+
                     </form>
                 </div>
             </div>

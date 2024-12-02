@@ -76,7 +76,7 @@
         </div>
     </section>
 
-    <section id="next-tournament" class="next-tournament-section bg-black">
+    <section id="next-tournament" class="next-tournament-section bg-black" style="background: #eee8fd !important;">
         <div class="next-tournament-wrap">
             <div class="results">
                 <div class="wrapper-results">
@@ -84,21 +84,18 @@
                         <div class="box-results-tournament-left">
 
                             <div class="info">
-                                <a href="https://badominton.io/tournament-league/hochiminh-love-badmintons">
-                                    <h2 class="leage-name">BAN LÃNH ĐẠO</h2>
+                                <a href="">
+                                    <h4 style="color: black" class="leage-name">BAN LÃNH ĐẠO</h4>
+                                    <h1 class="" style="color:blue;">Nguyễn Anh Tuấn</h1>
 
                                 </a>
                             </div>
                         </div>
-                        <div class="logo-left " style="display: block">
-                            <h6 class="">Đội trưởng đội bóng</h6>
-                            <h6 class="">Nguyễn Anh Tuấn</h6>
-                        </div>
 
-                        <div class="box-results-tournament-right">
+
+                        <div class="box-results-tournament-right" style="width: 30%;">
                             <div class="logo-right">
-                                <img alt="" src="https://badominton.io/images/logo-no-background.png" width="150"
-                                     height="150">
+                                <img style="width: 100%" alt="" src="https://vsports-assets-hfevhbaxghane9f2.z01.azurefd.net/files/1731257205983-XOpp.jpeg" >
                             </div>
                         </div>
                     </div>

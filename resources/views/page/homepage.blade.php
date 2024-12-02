@@ -1,7 +1,7 @@
 @extends('layouts.page')
 
 @section('title')
-    {{ env('APP_NAME', 'Badminton.io') }} - {{ __('Homepage') }}
+    HungHaFC- {{ __('Homepage') }}
 @endsection
 
 @section('css')
@@ -89,13 +89,13 @@
                 <div id="carouselExample" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{ asset('images/logo11.jpg') }}" alt="First Slide">
+                            <img class="d-block w-100" src="{{ asset('images/logo111.jpg') }}" alt="First Slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ asset('images/logo22.jpg') }}" alt="Second Slide">
+                            <img class="d-block w-100" src="{{ asset('images/logo222.jpg') }}" alt="Second Slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ asset('images/hunghafc.jpg') }}" alt="Third Slide">
+                            <img class="d-block w-100" src="{{ asset('images/hungha.jpg') }}" alt="Third Slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">

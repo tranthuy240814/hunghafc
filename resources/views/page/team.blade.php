@@ -146,7 +146,7 @@
 @section('content')
     <div class="box-historical container">
         <!-- Display tournament details -->
-        <div class="title text-center">
+        <div class="title text-left">
             <h2>DANH SÁCH THÀNH VIÊN ĐỘI BÓNG</h2>
         </div>
         <div class="title">
