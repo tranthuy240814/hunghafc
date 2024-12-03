@@ -42,6 +42,14 @@ final class Utility
         }
     }
 
+    public function saveImageVideo($input)
+    {
+        if ($input) {
+            $status = Storage::disk('public-image-video')->put($input['thumbnail']->getClientOriginalName(), $input['thumbnail']->get());
+            return $status;
+        }
+    }
+
     public function paginate($items, $perPage = 15, $path = null, $pageName = 'page', $page = null, $options = [])
     {
         $page = $page ?: Paginator::resolveCurrentPage($pageName);

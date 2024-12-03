@@ -17,6 +17,15 @@ class VideoRepository extends BaseRepository
         return $this->model->orderBy('created_at', 'desc')->take(9)->get();
     }
 
+    public function firstVideo()
+    {
+        return $this->model->orderBy('created_at', 'desc')->take(1)->get();
+    }
+
+    public function videoHomepage()
+    {
+        return $this->model->orderBy('created_at', 'desc')->take(4)->get();
+    }
 
     public function store($input)
     {

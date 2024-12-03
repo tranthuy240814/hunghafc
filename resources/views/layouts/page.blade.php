@@ -6,11 +6,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo-hungha.jpeg') }}">
     <meta name="msapplication-TileColor" content="#E45357">
-    <meta name="msapplication-TileImage" content="{{ asset('/assets/images/favicons/favicon-144.png') }}">
-    <meta name="application-name" content="{{ env('APP_NAME', 'Badminton.io') }}">
-    <meta name="msapplication-tooltip" content="{{ env('APP_NAME', 'Badminton.io') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('/images/logo_hungha.jpeg') }}">
+    <meta name="application-name" content="Hung Ha FC">
+    <meta name="msapplication-tooltip" content="Hung Ha FC">
     <meta name="description" content="{{ __('Run your badminton league for free, badminton scheduling and online results and statistics displayed on your free website.') }}">
     <meta name="keywords" content="{{ __('badminton scheduling,badminton scheduler,badminton league,badminton league website,manage badminton league online,run badminton league online') }}">
     <meta name="robots" content="Index, Follow">
@@ -27,7 +27,7 @@
     <link rel="alternate" hreflang="en-US" href="https://badminton.io">
     <link rel="alternate" hreflang="af" href="https://badminton.io">
     <link rel="alternate" hreflang="x-default" href="https://badminton.io">
-    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo_hungha.jpeg') }}">
+
 
     <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page/style.css') }}">
@@ -102,6 +102,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-uppercase" href="{{route('match')}}">{{__('THI ĐẤU')}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 text-uppercase" href="{{route('video')}}">{{__('Video')}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-uppercase" href="">{{__('TIN TỨC')}}</a>
@@ -189,8 +192,8 @@
             </div>
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top color-white  footer-p">
-                <p>{{__('© 2023 Company, Inc. All rights reserved.The content of this website is the property of Badominton.io or used under licence by Badominton.io .
-                No part may be copied, republished, stored, or otherwise republished or transmitted without the prior written permission of Badominton . For further information, please refer to our')}}</p>
+                <p>{{__('© 2023 Company, Inc. All rights reserved.The content of this website is the property of FC Hung Ha or used under licence by FC Hung Ha .
+                No part may be copied, republished, stored, or otherwise republished or transmitted without the prior written permission of FC Hung Ha . For further information, please refer to our')}}</p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
                                 <use xlink:href="#twitter"></use>

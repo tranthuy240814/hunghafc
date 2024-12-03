@@ -4,19 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Enums\Utility;
 use App\Repositories\CategoryPostRepository;
-use App\Repositories\LeagueRepository;
 use App\Repositories\PlayerPostRepository;
 use App\Repositories\PostRepository;
-use App\Repositories\UserLeagueRepository;
 use App\Repositories\UserRepository;
-use App\Repositories\ProductRepository;
 use App\Repositories\ScheduleRepository;
-use App\Repositories\RefereeRepository;
-use App\Repositories\ResultRepository;
 use App\Repositories\VideoRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
 use Config;
 use Session;
 
@@ -50,7 +43,7 @@ class HomeController extends Controller
 
     public function viewHome()
     {
-        $videos = $this->videoRepository->index();
+        $videos = $this->videoRepository->videoHomepage();
         return view('page.homepage', compact('videos'));
     }
 
@@ -86,18 +79,17 @@ class HomeController extends Controller
         return view('page.team', compact('listGoalkeeper', 'defender', 'midfielder','forward'));
     }
 
-    public function saveRegisterLeague(Request $request)
+    public function match()
     {
-        $startDate = strtotime($request['start_date']);
-        $dateCurrent =  strtotime(date("Y-m-d"));
+        $dataSchedule = $this->scheduleRepository->index();
+        return view('page.match', compact('dataSchedule'));
+    }
 
-        if ($dateCurrent >= $startDate) {
-            abort(404);
-        }
-        $userRegisterLeague = $request->except(['_token']);
-        $this->userLeagueRepository->store($userRegisterLeague);
-
-        return back()->with('message', 'You are allowed to access');
+    public function video()
+    {
+        $firstVideo = $this->videoRepository->firstVideo();
+        $videos = $this->videoRepository->index();
+        return view('page.video', compact('videos', 'firstVideo'));
     }
 
 

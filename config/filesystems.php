@@ -70,6 +70,14 @@ return [
             'throw' => false,
         ],
 
+        'public-image-video' => [
+            'driver' => 'local',
+            'root' => public_path() . '/images/upload/video/',
+            'url' => env('APP_URL') . '/images/upload/video/',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         'public-image-team' => [
             'driver' => 'local',
             'root' => public_path() . '/images/upload/team/',

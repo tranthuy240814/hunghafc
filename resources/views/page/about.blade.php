@@ -25,6 +25,14 @@
 </style>
 @section('content')
     <section class="container">
+        <div class="d-home-box">
+            <div class="is-title">
+                <h4 style="color:black;">Giới thiệu <i class='fas fa-angle-double-right'></i></h4>
+                <a href="">
+                    <i class="bi bi-chevron-double-right"></i>
+                </a>
+            </div>
+        </div>
         <div>
             <img class=" b-error b-error" width="100%"
                  src="{{ asset('images/hunghafc.jpg') }}">
@@ -34,34 +42,24 @@
         <div class="container c-introduction">
             <h1 class="text-center"> Giới thiệu</h1>
             <p class="wcs-page_body">
-                Dưới sự tài trợ của Tập đoàn T&T, câu lạc bộ Hà Nội – T&T thành lập vào ngày 18 tháng 6 năm 2006. 03 mùa
-                giải đầu tiên, từ một đội bóng gồm đa số các cầu thủ trẻ do huấn luyện viên Triệu Quang Hà (cựu cầu thủ
-                đội
-                tuyển bóng đá Việt Nam và câu lạc bộ Thể Công) dẫn dắt đã liên tiếp thăng ba hạng, từ hạng Ba lên hạng
-                chuyên nghiệp, giành quyền thi đấu ở đấu trường danh giá nhất Việt Nam V-League 2009.
-                Bước vào mùa giải 2010, đội bóng Thủ đô có sự thay đổi trên băng ghế huấn luyện, ông Phan Thanh Hùng –
-                trợ
-                lý số 1 của HLV Calisto được mời về với mục tiêu đoạt chức vô địch để dành tặng người hâm mộ nhân dịp
-                Đại lễ
-                1000 năm Thăng Long – Hà Nội. Sự đồng lòng, quyết tâm của toàn thể thành viên đội bóng đã đưa Hà Nội
-                –T&T
-                bay cao và bước lên ngôi vị cao nhất lần đầu tiên chỉ sau 1 năm góp mặt ở sân chơi cao nhất Việt Nam.
-                Đồng
-                thời, chiếc cúp vô địch còn có ý nghĩa giải tỏa cơn khát danh hiệu của những người yêu bóng đá Hà Thành
-                sau
-                26 năm chờ đợi (Công An Hà Nội – 1984).
-                Kể từ thời điểm đó, Hà Nội – T&T trở thành đội bóng đáng xem nhất của bóng đá Việt Nam, được biết đến
-                bởi
-                phong cách chơi đặc trưng là “ kiểm soát bóng, phối hợp trong phạm vi hẹp” áp dụng trong toàn hệ thống
-                đào
-                tạo của Câu lạc bộ. Sau 15 năm bước lên chuyên nghiệp, đại diện Thủ đô đã sưu tầm đầy đủ tất cả danh
-                hiệu từ
-                cấp độ đội I tới các lứa trẻ thuộc hệ thống thi đấu Quốc gia.
-                Năm 2016 nhân dịp kỷ niệm sinh nhật lần thứ 10, Ủy ban Nhân dân Thành phố Hà Nội đồng ý cho phép đội
-                bóng
-                đổi tên Hà Nội – T&T sang Câu lạc bộ bóng đá Hà Nội và giao toàn quyền quản lý, sử dụng sân vận động
-                Hàng
-                Đãy, với mong muốn đội bóng thể hiện cho ý chí và sức mạnh của nhân dân Thủ đô ngàn năm văn hiến.
+                Đội bóng "FC Hưng Hà" là một nhóm cầu thủ không chuyên, chủ yếu là anh em bạn bè ở khu vực Hưng Hà, tỉnh Thái Bình, tập hợp lại để rèn luyện sức khỏe và tạo sân chơi thể thao bổ ích. Đội bóng này không tham gia vào các giải đấu chính thức như các đội bóng chuyên nghiệp, nhưng nó có vai trò quan trọng trong việc kết nối cộng đồng và thúc đẩy lối sống lành mạnh.
+
+                1. Mục đích thành lập
+                Đội bóng "Anh Em Hưng Hà" được thành lập với mục tiêu đơn giản nhưng đầy ý nghĩa: tạo ra một sân chơi thể thao để mọi người trong khu vực có cơ hội rèn luyện sức khỏe, giao lưu, và gắn kết tình bạn. Đây là nơi các thành viên có thể cùng nhau tập luyện, vui chơi và chia sẻ niềm đam mê bóng đá.
+
+                2. Thành viên và tinh thần đội bóng
+                Các thành viên của đội bóng chủ yếu là người dân địa phương, bao gồm anh em, bạn bè, đồng nghiệp và những người cùng sở thích. Đội không có sự phân biệt về độ tuổi hay trình độ bóng đá, miễn là mọi người có niềm đam mê và yêu thích môn thể thao này. Tinh thần của đội là sự đoàn kết, chơi fair-play và hỗ trợ lẫn nhau để cùng tiến bộ.
+
+                3. Hoạt động và tập luyện
+                Đội bóng "Anh Em Hưng Hà" thường xuyên tổ chức các buổi tập và trận đấu giao hữu tại các sân bóng ở địa phương. Các buổi tập luyện không chỉ nhằm nâng cao kỹ năng cá nhân mà còn giúp các thành viên tăng cường thể lực và cải thiện sức khỏe. Ngoài ra, đội cũng tổ chức các buổi giao lưu, thi đấu với các đội bóng khác trong khu vực để tạo thêm động lực cho các thành viên.
+
+                4. Ý nghĩa xã hội
+                Đội bóng này không chỉ giúp các thành viên rèn luyện sức khỏe mà còn là nơi tạo dựng mối quan hệ, xây dựng cộng đồng. Những trận đấu hay buổi tập luyện cùng nhau là cơ hội để các thành viên gặp gỡ, trò chuyện và gắn bó với nhau hơn. Đội bóng cũng góp phần xây dựng tinh thần thể thao và lối sống tích cực trong cộng đồng.
+
+                5. Tương lai và phát triển
+                Mặc dù hiện tại đội bóng "Anh Em Hưng Hà" chưa tham gia các giải đấu lớn, nhưng trong tương lai, đội có thể mở rộng quy mô và tham gia vào các giải đấu phong trào hoặc các giải bóng đá địa phương để thử thách bản thân và nâng cao kỹ năng. Đội cũng có thể mời gọi thêm các thành viên mới để phát triển đội bóng và tăng cường sự đa dạng, phong phú trong các buổi tập và thi đấu.
+
+                Tóm lại, đội bóng "Anh Em Hưng Hà" là một minh chứng cho tinh thần thể thao, đoàn kết và đam mê của cộng đồng địa phương. Đội bóng không chỉ là nơi rèn luyện sức khỏe mà còn là một phần của cuộc sống, nơi gắn kết mọi người lại với nhau.
             </p>
         </div>
     </section>
@@ -71,7 +69,7 @@
             <h1 class="text-center"> Danh hiệu</h1>
             <div>
                 <img class=" b-error b-error" width="100%"
-                     src="{{ asset('images/hunghafc.jpg') }}">
+                     src="{{ asset('images/cup.jpg') }}">
             </div>
         </div>
     </section>
@@ -108,13 +106,13 @@
         <div class="container">
             <h1 class="text-center">Sân thi đấu</h1>
             <div class="d-flex">
+
                 <div>
-                    <img class=" b-error b-error" width="100%"
-                         src="{{ asset('images/hunghafc.jpg') }}">
-                </div>
-                <div>
-                    <img class=" b-error b-error" width="100%"
-                         src="{{ asset('images/hunghafc.jpg') }}">
+                    <a href="https://www.google.com/maps/place/S%C3%A2n+B%C3%B3ng+%C4%90%E1%BA%A1i+Nam+(+Ph%E1%BA%A1m+Tu+)/@21.0010112,105.7980416,9070m/data=!3m1!1e3!4m6!3m5!1s0x3135ad003d48423d:0xf97e42489c5c485a!8m2!3d20.9686614!4d105.8029465!16s%2Fg%2F11w3nj8qqj?entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <img class=" b-error b-error" width="100%" title="click để xem địa chỉ"
+                             src="{{ asset('images/gg_map.png') }}">
+                    </a>
+
                 </div>
 
             </div>

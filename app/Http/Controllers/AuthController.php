@@ -7,7 +7,6 @@ use App\Enums\Utility;
 use App\Models\User;
 use App\Enums\Title;
 use App\Enums\Group;
-use App\Events\MessageSent;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Auth;

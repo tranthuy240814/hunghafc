@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\Utility;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostRequest;
-use App\Http\Requests\PostUpdateRequest;
-use App\Http\Requests\UpdatePostRequest;
 use App\Repositories\VideoRepository;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
@@ -36,15 +34,15 @@ class VideoController extends Controller
         return view('admin.video.create');
     }
 
-    public function store(PostRequest $request)
+    public function store(Request $request)
     {
         $input = $request->except(['_token']);
         $input = $request->all();
+
         $input['slug'] =  Str::slug($input['title']);
-        $input['author'] = Auth::user()->id;
 
         if (isset($input['thumbnail'])) {
-            $img = $this->utility->saveImagePost($input);
+            $img = $this->utility->saveImageVideo($input);
             if ($img) {
                 $path = '/images/upload/video/' . $input['thumbnail']->getClientOriginalName();
                 $input['thumbnail'] = $path;
@@ -57,14 +55,14 @@ class VideoController extends Controller
 
     public function edit($id)
     {
-        $post = $this->videoRepository->show($id);
-        if (empty($post)) {
+        $video = $this->videoRepository->show($id);
+        if (empty($video)) {
             return redirect('/404');
         }
-        return view('admin.video.edit', compact('post'));
+        return view('admin.video.edit', compact('video'));
     }
 
-    public function update(PostUpdateRequest $request,  $id)
+    public function update(Request $request,  $id)
     {
         $input = $request->except(['_token']);
         $input['slug'] =  Str::slug($input['title']);
@@ -75,7 +73,7 @@ class VideoController extends Controller
         }
         $input = $this->videoRepository->update($input, $id);
 
-        return redirect()->route('post.index')->with('success',  __(' Video updated success'));
+        return redirect()->route('video.index')->with('success',  __(' Video updated success'));
     }
 
 

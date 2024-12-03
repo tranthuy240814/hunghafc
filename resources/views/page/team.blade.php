@@ -1,7 +1,7 @@
 @extends('layouts.page')
 
 @section('title')
-{{ env('APP_NAME', 'Badminton.io') }} - {{ __('Privacy') }}
+{{ env('APP_NAME', 'Badminton.io') }} - {{ __('Hung Ha FC') }}
 @endsection
 <style>
     .box-historical #list-historical {
@@ -142,14 +142,24 @@
         align-items: normal;
         justify-content: flex-start;
     }
+
+    .title-player {
+        padding: 10px;
+        margin-top: 10px;
+    }
 </style>
 @section('content')
     <div class="box-historical container">
         <!-- Display tournament details -->
-        <div class="title text-left">
-            <h2>DANH SÁCH THÀNH VIÊN ĐỘI BÓNG</h2>
+        <div class="d-home-box">
+            <div class="is-title">
+                <h4 style="color:black;">Danh sách thành viên đội bóng <i class='fas fa-angle-double-right'></i></h4>
+                <a href="">
+                    <i class="bi bi-chevron-double-right"></i>
+                </a>
+            </div>
         </div>
-        <div class="title">
+        <div class="title-player">
             <div class="">
                 <h3>THỦ MÔN</h3>
             </div>
@@ -171,7 +181,7 @@
             </div>
             @endforeach
         </div>
-        <div class="title">
+        <div class="title-player">
             <div class="">
                 <h3>HẬU VỆ</h3>
             </div>
@@ -193,7 +203,7 @@
             @endforeach
         </div>
 
-        <div class="title">
+        <div class="title-player">
             <div class="">
                 <h3>TIỀN VỆ</h3>
             </div>
@@ -215,7 +225,7 @@
             @endforeach
         </div>
 
-        <div class="title">
+        <div class="title-player">
             <div class="">
                 <h3>TIỀN ĐẠO</h3>
             </div>

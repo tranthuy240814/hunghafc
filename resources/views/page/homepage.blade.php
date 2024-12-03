@@ -28,14 +28,10 @@
                         <div class="is-left">
                             <div class="is-title"><h4>Giới thiệu</h4><a href="/gioi-thieu"><i
                                         class="bi bi-chevron-double-right"></i></a></div>
-                            <div class="b-maincontent"><p>Dưới sự tài trợ của Tập đoàn T&amp;T, câu lạc bộ Hà Nội – T&amp;T
-                                    thành lập vào ngày 18 tháng 6 năm 2006. 03 mùa giải đầu tiên, từ một đội bóng gồm đa
-                                    số
-                                    các cầu thủ trẻ do huấn luyện viên Triệu Quang Hà (cựu cầu thủ đội tuyển bóng đá
-                                    Việt
-                                    Nam và câu lạc bộ Thể Công) dẫn dắt đã liên tiếp thăng ba hạng, từ hạng Ba lên hạng
-                                    chuyên nghiệp, giành quyền thi đấu ở đấu trường danh giá nhất Việt Nam V-League
-                                    2009.</p></div>
+                            <div class="b-maincontent"><p>Đội bóng "FC Hưng Hà" được thành lập với mục tiêu đơn giản
+                                    nhưng đầy ý nghĩa: tạo ra một sân chơi thể thao để mọi người trong khu vực có cơ hội
+                                    rèn luyện sức khỏe, giao lưu, và gắn kết tình bạn. Đây là nơi các thành viên có thể
+                                    cùng nhau tập luyện, vui chơi và chia sẻ niềm đam mê bóng đá.</p></div>
                         </div>
                         <div class="is-right"><img src="{{ asset('/images/hunghafc.jpg') }}"></div>
                     </div>
@@ -67,7 +63,6 @@
                                         <div class="c-img"><img
                                                 src="https://cms.hanoifc.net/images/cde56006-947f-4393-8403-a0c9a0fcb2d8.png" width="200px"></div>
                                         <div class="c-name">Hà Nội</div>
-
                                     </div>
                             </div>
                         </div>
@@ -131,7 +126,7 @@
 
                         <div class="news-overview-text">
                             <h4 class="media-heading fw-400 fs-16px">
-                                <a href="https://badominton.io/news/se-ra-sao-neu-ban-mang-giay-the-thao-mon-khac-vao-choi-cau-long" title="Sẽ ra sao nếu bạn mang giày thể thao môn khác vào chơi cầu lông?">
+                                <a href="{{$video->url}}" target="_blank">
                                    {{$video->title}}  </a>
                             </h4>
                             <span class="fw-300 fs-12px text-gray" style="color: #fff; line-height: 1.5em; transition: .35s color ease-in-out;">
