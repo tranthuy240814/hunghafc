@@ -9,7 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 @endsection
 
 @section('content')
@@ -50,7 +50,6 @@
                         <div class="box-results-tournament">
                             <div class="box-results-tournament-left">
                                 <div class="logo-left">
-                                    <div class="c-name"><img><span class="c-text">2024</span></div>
                                     <div class="c-name"><span>19/11/2024 19:15</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>Sân bóng Đại Nam</span>
                                     </div>
                                 </div>
@@ -80,10 +79,9 @@
         <div class="c-team-info-home">
             <div class="container">
                 <div class="d-home-box">
-                    <div class="is-title"><h4 style="color:#472f92;">Đội hình</h4>
-                        <a href="/doi-hinh">
-                            <i class="bi bi-chevron-double-right"></i>
-                        </a>
+
+                    <div class="is-title">
+                        <h4 style="color:black;">Đội hình <i class='fas fa-angle-double-right'></i></h4>
                     </div>
                 </div>
                 <div id="carouselExample" class="carousel slide" data-ride="carousel">
@@ -112,7 +110,8 @@
 
         <div class="container">
             <div class="d-home-box">
-                <div class="is-title" ><h4 style="color:#472f92;">Video</h4>
+                <div class="is-title" >
+                    <h4 style="color:black;">Video <i class='fas fa-angle-double-right'></i></h4>
                     <a href="/doi-hinh">
                         <i class="bi bi-chevron-double-right"></i>
                     </a>
@@ -122,74 +121,25 @@
         <section id="news" class="news-section ">
             <div class="">
                 <div class="news-overview-wrap">
+                    @foreach($videos as $video)
                     <div class="news-overview-item">
                         <div class="news-overview-image">
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/JSM43TN1n3U/hqdefault.jpg?s…AYgATgBQAE=&rs=AOn4CLDqMalWdgYjymI04I9uY0es5sD1Ag" alt="" class="img-responsive-hover b-error">
+                            <a href="{{ $video->url }}">
+                                <img src="{{asset($video->thumbnail)}}" alt="" class="img-responsive-hover b-error">
                             </a>
                         </div>
 
                         <div class="news-overview-text">
                             <h4 class="media-heading fw-400 fs-16px">
                                 <a href="https://badominton.io/news/se-ra-sao-neu-ban-mang-giay-the-thao-mon-khac-vao-choi-cau-long" title="Sẽ ra sao nếu bạn mang giày thể thao môn khác vào chơi cầu lông?">
-                                    FULL MATCH: FC HƯNG HÀ - FC THÁI HÀ | Football Friendly  </a>
+                                   {{$video->title}}  </a>
                             </h4>
-                            <span class="fw-300 fs-12px text-gray">
-                        Match 01/09/2024<br>
+                            <span class="fw-300 fs-12px text-gray" style="color: #fff; line-height: 1.5em; transition: .35s color ease-in-out;">
+                      <?php echo date_format($video->created_at, 'd-F-Y')  ?><br>
                     </span>
                         </div>
                     </div>
-                    <div class="news-overview-item">
-                        <div class="news-overview-image">
-                            <a href="">
-                                <img src="https://badominton.io/images/upload/post/b7lbfjrcfqr4swmk687t.jpg" alt="" class="img-responsive-hover b-error">
-                            </a>
-                        </div>
-
-                        <div class="news-overview-text">
-                            <h4 class="media-heading fw-400 fs-16px">
-                                <a href="https://badominton.io/news/nhung-dieu-can-biet-de-thuc-hien-ky-thuat-do-giao-cau-dung-cach-hieu-qua" title="Những điều cần biết để thực hiện Kỹ thuật đỡ giao cầu đúng cách, HIỆU QUẢ">
-                                    Những điều cần biết để thực hiện Kỹ thuật đỡ giao cầu đúng cách, HIỆU QUẢ </a>
-                            </h4>
-                            <span class="fw-300 fs-12px text-gray">
-                        11-November-2024<br>
-                    </span>
-                        </div>
-                    </div>
-                    <div class="news-overview-item">
-                        <div class="news-overview-image">
-                            <a href="">
-                                <img src="https://badominton.io/images/upload/post/Anh_1_2_5__CCOX.jpg" alt="" class="img-responsive-hover b-error">
-                            </a>
-                        </div>
-
-                        <div class="news-overview-text">
-                            <h4 class="media-heading fw-400 fs-16px">
-                                <a href="https://badominton.io/news/cac-loi-sai-co-ban-trong-cau-long-khien-ban-thua-tran" title="Các lỗi sai cơ bản trong cầu lông khiến bạn thua trận">
-                                    Các lỗi sai cơ bản trong cầu lông khiến bạn thua trận </a>
-                            </h4>
-                            <span class="fw-300 fs-12px text-gray">
-                        11-November-2024<br>
-                    </span>
-                        </div>
-                    </div>
-                    <div class="news-overview-item">
-                        <div class="news-overview-image">
-                            <a href="">
-                                <img src="https://badominton.io/images/upload/post/1-dau-lung-shutterstock-9123.jpg" alt="" class="img-responsive-hover b-error">
-                            </a>
-                        </div>
-
-                        <div class="news-overview-text">
-                            <h4 class="media-heading fw-400 fs-16px">
-                                <a href="https://badominton.io/news/danh-cau-long-bi-dau-lung-co-gay-nguy-hiem-khong" title="Đánh cầu lông bị đau lưng có gây nguy hiểm không ?">
-                                    Đánh cầu lông bị đau lưng có gây nguy hiểm không ? </a>
-                            </h4>
-                            <span class="fw-300 fs-12px text-gray">
-                        17-September-2024<br>
-                    </span>
-                        </div>
-                    </div>
+                        @endforeach
                 </div>
                 <div class="" style="margin-top: -9px;">
                 </div>

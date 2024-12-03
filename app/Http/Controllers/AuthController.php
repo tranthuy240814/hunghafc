@@ -11,24 +11,18 @@ use App\Events\MessageSent;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Repositories\UserLeagueRepository;
-use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Hash;
 use Session;
 
 class  AuthController extends Controller
 {
-    protected $rankingRepository;
-    protected $userLeagueRepository;
     protected $utility;
 
     public function __construct(
 
-        UserLeagueRepository $userLeagueRepository,
         Utility $ultity
     ) {
-        $this->userLeagueRepository = $userLeagueRepository;
         $this->utility = $ultity;
     }
 
@@ -86,15 +80,6 @@ class  AuthController extends Controller
         $carbonNow = Carbon::createFromFormat('Y-m-d H:i:s', date('Y-m-d H:i:s'));
         $timeEnd = $carbonNow->addMinutes(60)->format('Y-m-d H:i:s');
 
-
-        $dataRanking = [
-            'user_id' => $user->id,
-            'points' => 0,
-            'places' => 0,
-            'places_old' => 0
-        ];
-        $this->rankingRepository->create($dataRanking);
-
         Auth::loginUsingId($user->id);
         if ($user->role == 'user') {
             return \redirect()->route('home');
@@ -107,8 +92,5 @@ class  AuthController extends Controller
     {
         return view('page.user.profile');
     }
-
-
-
 
 }

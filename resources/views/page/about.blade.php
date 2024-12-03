@@ -76,7 +76,7 @@
         </div>
     </section>
 
-    <section id="next-tournament" class="next-tournament-section bg-black" style="background: #eee8fd !important;">
+    <section id="next-tournament" class="next-tournament-section bg-black" style="background: #ebebeb !important">
         <div class="next-tournament-wrap">
             <div class="results">
                 <div class="wrapper-results">

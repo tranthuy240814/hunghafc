@@ -31,7 +31,7 @@
 }
 
 .next-tournament-section {
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -616,7 +616,7 @@ body.open .navigation-menu__labels {
 }
 
 .nav-a a:hover {
-   color: red;
+   color: white !important;
 }
 
 .wcs-page_body {
@@ -626,7 +626,7 @@ body.open .navigation-menu__labels {
 }
 
 .c-intro-home {
-    background: #472f92;
+    background: #184931;
     padding: 25px 0;
     margin-top: 3%;
 }

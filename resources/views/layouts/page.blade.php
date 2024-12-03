@@ -27,7 +27,7 @@
     <link rel="alternate" hreflang="en-US" href="https://badminton.io">
     <link rel="alternate" hreflang="af" href="https://badminton.io">
     <link rel="alternate" hreflang="x-default" href="https://badminton.io">
-    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logohungha.jpg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo_hungha.jpeg') }}">
 
     <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/page/style.css') }}">
@@ -77,14 +77,18 @@
         cursor: pointer;
     }
 
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #ffc904 !important;
+    }
+
 
 
 </style>
 <body>
-    <header style="background-color: #472f92">
+    <header style="background-color:#184931">
         <nav class="navbar navbar-expand-lg sticky-top navbar-light p-3 shadow-sm" >
             <div class="container">
-                <a href="{{ route('home') }}"><img  class="logo-image" src="{{ asset('/images/logohungha.jpg') }}" alt="{{ env('APP_NAME', 'Badminton.io') }}" width="100" height="100"></a>
+                <a href="{{ route('home') }}"><img  class="logo-image" src="{{ asset('/images/logo-hungha.jpeg') }}" alt="{{ env('APP_NAME', 'Badminton.io') }}" width="100" height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -97,13 +101,13 @@
                             <a class="nav-link mx-2 text-uppercase" href="{{ route('team') }}">{{__('ĐỘI HÌNH')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-uppercase" href="">{{__('THI ĐẤU')}}</a>
+                            <a class="nav-link mx-2 text-uppercase" href="{{route('match')}}">{{__('THI ĐẤU')}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-uppercase" href="">{{__('TIN TỨC')}}</a>
                         </li>
                         @if(Auth::check() && Auth::user()->role =="admin" )
-                        <li class="nav-item" style="background: #312f2f">
+                        <li class="nav-item">
                             <a class="nav-link mx-2 text-uppercase" href="{{ route('dashboard') }}">{{__('DASHBOARD')}}</a>
                         </li>
                         @endif
@@ -124,8 +128,6 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item"href="{{ route('profile.edit') }}">{{__('My profile')}}</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('my.league') }}">{{__('My league')}}</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('my.group') }}">{{__('My group')}}</a></li>
                                     <li><a class="dropdown-item" href="{{ route('logout') }}">{{__('Logout')}}</a></li>
                                 </ul>
                             </div>
@@ -142,7 +144,7 @@
 
     @yield('content')
 
-    <div class="" style="background: #472f92; text-transform: uppercase;">
+    <div class="" style="background: #184931; text-transform: uppercase;">
         <footer class="container py-5"  >
             <div class="row">
                 <div class="color-white col-md-3 mb-3">

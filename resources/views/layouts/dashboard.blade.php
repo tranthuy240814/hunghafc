@@ -19,7 +19,7 @@
 
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>{{$countLeague}}<sup style="font-size: 20px"></sup></h3>
+                    <h3><sup style="font-size: 20px"></sup></h3>
                     <p>{{__('League')}}</p>
                 </div>
                 <div class="icon">

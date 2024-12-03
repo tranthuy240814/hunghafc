@@ -13,6 +13,7 @@ use App\Repositories\ProductRepository;
 use App\Repositories\ScheduleRepository;
 use App\Repositories\RefereeRepository;
 use App\Repositories\ResultRepository;
+use App\Repositories\VideoRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
@@ -27,6 +28,7 @@ class HomeController extends Controller
     protected $postRepository;
     protected $categoryPostRepository;
     protected $playerRepository;
+    protected $videoRepository;
 
     public function __construct(
         UserRepository $userRepository,
@@ -34,8 +36,10 @@ class HomeController extends Controller
         Utility $ultity,
         PostRepository $postRepository,
         CategoryPostRepository $categoryPostRepository,
-        PlayerPostRepository $playerRepository
+        PlayerPostRepository $playerRepository,
+        VideoRepository $videoRepository
     ) {
+        $this->videoRepository = $videoRepository;
         $this->userRepository = $userRepository;
         $this->scheduleRepository = $scheduleRepository;
         $this->utility = $ultity;
@@ -46,8 +50,8 @@ class HomeController extends Controller
 
     public function viewHome()
     {
-
-        return view('page.homepage');
+        $videos = $this->videoRepository->index();
+        return view('page.homepage', compact('videos'));
     }
 
     public function viewSearch(Request $request)

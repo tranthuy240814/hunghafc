@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo-no-background.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logo-hungha.jpeg') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -45,8 +45,8 @@
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="{{route('dashboard')}}" class="brand-link">
-                <img src="{{ asset('/images/logo-no-background.png') }}" class="brand-image img-circle elevation-3">
-                <span class="brand-text font-weight-light">{{ __('Badminton') }}</span>
+                <img src="{{ asset('/images/logo-hungha.jpeg') }}" class="brand-image img-circle elevation-3">
+                <span class="brand-text font-weight-light">{{ __('FC Hung Ha') }}</span>
             </a>
             <div class="sidebar">
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -70,33 +70,6 @@
                             </a>
                         </li>
                         @endif
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    {{ __('League') }}
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right"></span>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route('league.create')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('Create League') }}</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('league.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('List League') }}</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-calendar"></i>
@@ -108,82 +81,27 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('schedule.league') }}" class="nav-link">
+                                    <a href="{{route('schedule.create')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('League Schedule') }}</p>
+                                        <p>{{ __('Create Schedule') }}</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('schedule.index' ) }}" class="nav-link">
+                                    <a href="" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>{{ __('List Schedule') }}</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('schedule.result') }}" class="nav-link">
+                                    <a href="" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>{{ __('Result') }}</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    {{ __('Group') }}
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right"></span>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('group.create') }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('Create Group') }}</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('group.index' ) }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('List Group') }}</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('list.groupTraining' ) }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('List Group Training') }}</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
                         @if(Auth::user()->role == 'admin')
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-weight-hanging"></i>
-                                <p>
-                                    {{ __('Product') }}
-                                    <i class="fas fa-angle-left right"></i>
-                                    <span class="badge badge-info right"></span>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('product.create') }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('Create Product') }}</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('product.index' ) }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>{{ __('List Product') }}</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-clipboard"></i>
@@ -229,6 +147,31 @@
                                     <a href="{{ route('post.index' ) }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>{{ __('List Post') }}</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-video"></i>
+                                <p>
+                                    {{ __('Video') }}
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right"></span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('video.create') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{ __('Create Video') }}</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('video.index' ) }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{ __('List Video') }}</p>
                                     </a>
                                 </li>
                             </ul>

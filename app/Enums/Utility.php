@@ -9,29 +9,14 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 final class Utility
 {
-    public function saveImageLeague($input)
+    public function saveImageSchedule($input)
     {
         if ($input) {
-            $status = Storage::disk('public-image-league')->put($input['images']->getClientOriginalName(), $input['images']->get());
+            $status = Storage::disk('public-image-schedule')->put($input['logo_team_2']->getClientOriginalName(), $input['logo_team_2']->get());
             return $status;
         }
     }
 
-    public function saveImageTeam($input)
-    {
-        if ($input) {
-            $status = Storage::disk('public-image-team')->put($input['images']->getClientOriginalName(), $input['images']->get());
-            return $status;
-        }
-    }
-
-    public function saveImageGroup($input)
-    {
-        if ($input) {
-            $status = Storage::disk('public-image-group')->put($input['images']->getClientOriginalName(), $input['images']->get());
-            return $status;
-        }
-    }
 
     public function saveImageProduct($input)
     {

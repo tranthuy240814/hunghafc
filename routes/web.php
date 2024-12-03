@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\Admin\CategoryPostController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\ScheduleController;
 use App\Http\Controllers\SocialLoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LeagueController;
-use App\Http\Controllers\Admin\ScheduleController;
 use App\Http\Controllers\Admin\GroupController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -30,6 +31,7 @@ use App\Http\Controllers\AuthController;
     Route::get('/search/', [HomeController::class, 'viewSearch'])->name('search');
     Route::get('/gioi-thieu/', [HomeController::class, 'viewAbout'])->name('about');
     Route::get('/doi-hinh/', [HomeController::class, 'team'])->name('team');
+    Route::get('/lich-thi-hinh/', [HomeController::class, 'match'])->name('match');
     Route::get('/news/{slug}', [HomeController::class, 'newsDetail'])->name('news-show');
     Route::get('/news', [HomeController::class, 'news'])->name('news');
     Route::get('/news/category/{slug}', [HomeController::class, 'newsCategory'])->name('newsCategory');
@@ -59,6 +61,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/profile/', [AuthController::class, 'profile'])->name('profile');
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 
+    //schedule
+    Route::get('/list-schedule/', [ScheduleController::class, 'index'])->name('schedule.index');
+    Route::get('/create-schedule/', [ScheduleController::class, 'create'])->name('schedule.create');
+    Route::post('/store-schedule/', [ScheduleController::class, 'store'])->name('schedule.store');
+    Route::get('/schedule/{id}/', [ScheduleController::class, 'show'])->name('schedule.show');
+    Route::get('/edit-schedule/{id}/', [ScheduleController::class, 'edit'])->name('schedule.edit');
+    Route::post('/update-schedule/{id}/', [ScheduleController::class, 'update'])->name('schedule.update');
+    Route::get('/destroy/{id}/', [ScheduleController::class, 'destroy'])->name('schedule.destroy');
 
     //category post
     Route::get('/list-category-post/', [CategoryPostController::class, 'index'])->name('categoryPost.index');
@@ -78,7 +88,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/update-post/{id}/', [PostController::class, 'update'])->name('post.update');
     Route::get('/destroy/{id}/', [PostController::class, 'destroy'])->name('post.destroy');
 
-
+    //video
+    Route::get('/list-video/', [VideoController::class, 'index'])->name('video.index');
+    Route::get('/create-video/', [VideoController::class, 'create'])->name('video.create');
+    Route::post('/store-video/', [VideoController::class, 'store'])->name('video.store');
+    Route::get('/video/{id}/', [VideoController::class, 'show'])->name('video.show');
+    Route::get('/edit-video/{id}/', [VideoController::class, 'edit'])->name('video.edit');
+    Route::post('/update-video/{id}/', [VideoController::class, 'update'])->name('video.update');
+    Route::get('/destroy/{id}/', [VideoController::class, 'destroy'])->name('video.destroy');
     Route::middleware(['admin'])->group(
         function () {
             Route::get('/dashboard/', [DashboardController::class, 'dashboard'])->name('dashboard');;

@@ -53,10 +53,10 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
-        'public-image-league' => [
+        'public-image-schedule' => [
             'driver' => 'local',
-            'root' => public_path() . '/images/upload/league/',
-            'url' => env('APP_URL') . '/images/upload/league/',
+            'root' => public_path() . '/images/upload/schedule/',
+            'url' => env('APP_URL') . '/images/upload/schedule/',
             'visibility' => 'public',
             'throw' => false,
         ],
