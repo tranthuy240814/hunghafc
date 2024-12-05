@@ -31,4 +31,10 @@ class ScheduleRepository extends BaseRepository
         return $this->model->where('id', $id)->update($input);
     }
 
+    public function lastSchedule()
+    {
+        return $this->model->orderBy('created_at', 'desc')->take(1)->get();
+    }
+
+
 }

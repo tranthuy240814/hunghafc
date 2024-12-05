@@ -44,7 +44,8 @@ class HomeController extends Controller
     public function viewHome()
     {
         $videos = $this->videoRepository->videoHomepage();
-        return view('page.homepage', compact('videos'));
+        $lastSchedule = $this->scheduleRepository->lastSchedule();
+        return view('page.homepage', compact('videos', 'lastSchedule'));
     }
 
     public function viewSearch(Request $request)

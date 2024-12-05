@@ -38,15 +38,53 @@
                 </div>
             </div>
         </div>
+        <div class="container" style="margin-top: 20px">
+            <div class="d-home-box">
+                <div class="is-title" >
+                    <h4 style="color:black;">Video <i class='fas fa-angle-double-right'></i></h4>
+                    <a href="/doi-hinh">
+                        <i class="bi bi-chevron-double-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section id="news" class="news-section container">
+            <div class="">
+                <div class="news-overview-wrap">
+                    @foreach($videos as $video)
+                        <div class="news-overview-item">
+                            <div class="news-overview-image">
+                                <a href="{{ $video->url }}">
+                                    <img src="{{asset($video->thumbnail)}}" alt="" class="img-responsive-hover b-error">
+                                </a>
+                            </div>
 
-        <section id="next-tournament" class="next-tournament-section bg-black ">
+                            <div class="news-overview-text">
+                                <h4 class="media-heading fw-400 fs-16px">
+                                    <a href="{{$video->url}}" target="_blank">
+                                        {{$video->title}}  </a>
+                                </h4>
+                                <span class="fw-300 fs-12px text-gray" style="color: #fff; line-height: 1.5em; transition: .35s color ease-in-out;">
+                    </span>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="" style="margin-top: -9px;">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="next-tournament" class="next-tournament-section bg-black " style="margin-top: 20px">
             <div class="next-tournament-wrap container">
+                @foreach($lastSchedule as $item)
                 <div class="results">
                     <div class="wrapper-results">
                         <div class="box-results-tournament">
                             <div class="box-results-tournament-left">
                                 <div class="logo-left">
-                                    <div class="c-name"><span>19/11/2024 19:15</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>Sân bóng Đại Nam</span>
+                                    <div class="c-name"><span>{{$item->date}} {{$item->time}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>{{$item->stadium}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -55,19 +93,24 @@
                                     <div class="c-left-team d-flex">
                                         <div class="c-name">Hưng Hà</div>
                                         <div class="c-img">
-                                            <img src="{{asset('/images/logo-hungha.jpeg')}}" width="200px">
+                                            <img src="{{asset('/images/logo-hungha.jpeg')}}" width="150px">
                                         </div>
                                     </div>
+                                @if(isset($item->result_team_1))
+                                    <div class="c-name" style="padding: 20px; font-size: 20px; "><span style="font-weight: 600">{{$item->result_team_1}} - {{$item->result_team_2}}</span></div>
+                                @else
                                     <div class="c-name" style="padding: 20px; font-size: 30px"><span>- -</span></div>
+                                @endif
                                     <div class="c-left-team d-flex">
                                         <div class="c-img"><img
-                                                src="https://cms.hanoifc.net/images/cde56006-947f-4393-8403-a0c9a0fcb2d8.png" width="200px"></div>
-                                        <div class="c-name">Hà Nội</div>
+                                                src="{{asset($item->logo_team_2 ?? '/images/team_default.png')}}" width="150px"></div>
+                                        <div class="c-name">{{$item->team2 }}</div>
                                     </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                    @endforeach
             </div>
         </section>
 
@@ -102,52 +145,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="d-home-box">
-                <div class="is-title" >
-                    <h4 style="color:black;">Video <i class='fas fa-angle-double-right'></i></h4>
-                    <a href="/doi-hinh">
-                        <i class="bi bi-chevron-double-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <section id="news" class="news-section ">
-            <div class="">
-                <div class="news-overview-wrap">
-                    @foreach($videos as $video)
-                    <div class="news-overview-item">
-                        <div class="news-overview-image">
-                            <a href="{{ $video->url }}">
-                                <img src="{{asset($video->thumbnail)}}" alt="" class="img-responsive-hover b-error">
-                            </a>
-                        </div>
-
-                        <div class="news-overview-text">
-                            <h4 class="media-heading fw-400 fs-16px">
-                                <a href="{{$video->url}}" target="_blank">
-                                   {{$video->title}}  </a>
-                            </h4>
-                            <span class="fw-300 fs-12px text-gray" style="color: #fff; line-height: 1.5em; transition: .35s color ease-in-out;">
-                      <?php echo date_format($video->created_at, 'd-F-Y')  ?><br>
-                    </span>
-                        </div>
-                    </div>
-                        @endforeach
-                </div>
-                <div class="" style="margin-top: -9px;">
-                </div>
-            </div>
-
-        </section>
-        <div class="partners-section-wrap">
-            <div class="partners-section">
-                <div class="partners-left" style="margin-bottom: 100px">
-
-                </div>
-            </div>
-        </div>
-
     </div>
 @endsection
