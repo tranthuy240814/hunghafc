@@ -29,8 +29,8 @@
             <div class="card-body">
                 <form id="formAccountSettings" method="POST" action="{{ route('schedule.store') }}" enctype="multipart/form-data">
                     @csrf()
-                    <div class="col-md-6">
-                        <div class="col-12">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
                             <label for="lastName" class="form-label">{{__('Match')}}</label>
                             <input class="form-control" value="{{ old('match') }}" type="text" name="match" id="match" placeholder="{{ __('Enter match ') }}"/>
                             @if ($errors->has('match'))
@@ -57,20 +57,21 @@
                                 @endif
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="col-12">
-                            <label for="lastName" class="form-label">{{__('Stadium')}}</label>
-                            <input class="form-control" value="{{ old('stadium') }}" type="text" name="stadium" id="stadium" placeholder="{{ __('Enter stadium') }}"/>
-                            @if ($errors->has('stadium'))
-                                <span class="text-danger">{{ $errors->first('stadium') }}</span>
-                            @endif
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <label for="lastName" class="form-label">{{__('Stadium')}}</label>
+                                <input class="form-control" value="{{ old('stadium') }}" type="text" name="stadium" id="stadium" placeholder="{{ __('Enter stadium') }}"/>
+                                @if ($errors->has('stadium'))
+                                    <span class="text-danger">{{ $errors->first('stadium') }}</span>
+                                @endif
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-4 col-md-6">
+
+
+                    <div class="row mt-4">
+                        <div class=" col-md-6">
                             <div class="form-group">
                                 <label>{{ __('Logo') }}</label>
                                 <div class="">

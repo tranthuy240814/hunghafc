@@ -8,13 +8,11 @@
         background-color: lightgrey;
     }
 
-    .wrapper-results:before {
-        content: "";
-        z-index: 2;
-        position: absolute;
-        height: 47%;
-        background-color: #184931;
-        width: 10px;
+    .wrapper-results {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-left: 10px solid #184931 !important;
     }
 
     .wrapper-results {
